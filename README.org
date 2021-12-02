@@ -1,0 +1,28 @@
+#+title: robby-lisp
+#+author: Lucas S. Vieira
+
+Lisp implementation of Robby, the Soda-Can-Collecting Robot
+
+* About
+
+Robby  is an  alegory created  by Melanie  Mitchell on  the book  "Complexity: A
+Guided Tour", to discuss genetic algorithms.
+
+In brief explanation,  Robby is a robot  that cleans up a  board containing soda
+cans. The strategy  for cleaning soda cans  can be thought of  as something that
+can be evolved through genetic algorithms. 
+
+This project  implements this genetic algorithm,  as described in the  book, for
+study reasons. Furthermore, fitness calculation for each individual is offloaded
+to  futures, which  operate on  multiple  worker threads  through the  LPARALLEL
+library.
+
+More  information   on  this   project  and  its   objects  will   be  disclosed
+soon. Meanwhile, I did  my best to write documentation for  this project. If you
+wish to  study it,  I recommend  reading the code  files in  the order  they are
+listed on the project .ASD file.
+
+* License
+
+This code is distributed under the MIT License. See LICENSE for details.
+
