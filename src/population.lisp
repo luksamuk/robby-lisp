@@ -17,7 +17,6 @@ with size *POPULATION-SIZE*.
 
 The tournament will always seek a specimen different than PARTNER, if
 any is given."
-  
   (loop with best = nil
         repeat (truncate (* *population-size* *tournament-population-perc*))
         do (let ((current
@@ -87,8 +86,9 @@ at least *POPULATION-SIZE*."
   "Sort population by fitness. This function should be used only by debugging
 purposes to avoid forcefully calculating the fitness of all individuals."
   (sort population
-        (lambda (a b) (> (lparallel:force (fitness a))
-                    (lparallel:force (fitness b))))))
+        (lambda (a b)
+          (> (lparallel:force (fitness a))
+             (lparallel:force (fitness b))))))
 
 (defun evolve (population &key (debrief-fn nil) (debrief-step 10))
   "Evolves a population for a number of generations *NUM-GENERATIONS*.
